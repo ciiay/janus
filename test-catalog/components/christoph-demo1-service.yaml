@@ -5,15 +5,21 @@ metadata:
   title: Christophs Demo 1 Service
   description: |
     This is a small demo service with annotations for:
-    - Tekton
+    - Tekton (filtered by the namespace below)
   links:
     - title: My Janus notes
       url: https://github.com/jerolimov/janus
   annotations:
+    backstage.io/source-location: url:https://github.com/jerolimov/janus/blob/main/test-catalog/components/christoph-demo1-service.yaml
+    backstage.io/techdocs-ref: dir:..
     github.com/project-slug: jerolimov/janus
     backstage.io/kubernetes-id: christoph-demo1-service
     backstage.io/kubernetes-namespace: christoph-backstage-test
+    janus-idp.io/tekton: my-backstage
+  tags:
+    - christoph-demo
 spec:
   type: service
-  owner: cjerolim
-  lifecycle: production
+  owner: user:cjerolim
+  lifecycle: experimental
+  system: christoph-demo-system

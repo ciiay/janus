@@ -1,0 +1,40 @@
+apiVersion: tekton.dev/v1
+kind: PipelineRun
+metadata:
+  namespace: christoph-backstage-test
+  generateName: christoph-demo2-service-
+  labels:
+    backstage.io/kubernetes-id: christoph-demo2-service
+spec:
+  params:
+    - name: NAME
+      value: "world"
+  pipelineSpec:
+    tasks:
+      - name: echo-hello
+        taskSpec:
+          steps:
+            - name: echo
+              image: ubuntu
+              script: |
+                #!/usr/bin/env bash
+                echo "Hello"
+      - name: echo-name
+        taskSpec:
+          steps:
+            - name: echo
+              image: ubuntu
+              script: |
+                #!/usr/bin/env bash
+                echo "$(params.NAME)"
+        runAfter:
+          - echo-hello
+      - name: echo-bye
+        taskSpec:
+          steps:
+            - name: echo
+              image: ubuntu
+              script: |
+                #!/usr/bin/env bash
+                sleep 3
+                echo "Goodbye!"

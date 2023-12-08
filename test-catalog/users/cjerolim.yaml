@@ -2,6 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
   name: cjerolim
+  title: Christoph Jerolimov
 spec:
   profile:
     email: cjerolim@redhat.com

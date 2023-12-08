@@ -1,0 +1,20 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: christoph-demo-system
+  title: Christophs Demo System
+  description: |
+    This is a small demo system
+  annotations:
+    backstage.io/source-location: url:https://github.com/jerolimov/janus/blob/main/test-catalog/systems/christoph-demo-system.yaml
+    backstage.io/techdocs-ref: dir:..
+    github.com/project-slug: jerolimov/janus
+  tags:
+    - christoph-demo
+  links:
+    - title: My Janus notes
+      url: https://github.com/jerolimov/janus
+spec:
+  type: system
+  owner: user:cjerolim
+  lifecycle: experimental

@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: christoph-demo-components
+spec:
+  targets:
+    - ../groups/janus-authors.yaml
+    - ../users/cjerolim.yaml
+    - ../systems/christoph-demo-system.yaml
+    - ../components/backstage-showcase.yaml
+    - ../components/christoph-demo1-service.yaml
+    - ../components/christoph-demo2-service.yaml
+    - ../components/christoph-demo3-service.yaml
