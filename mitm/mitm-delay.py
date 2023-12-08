@@ -1,6 +1,6 @@
 # Start with:
 #
-# mitmweb --ssl_insecure -s mitm-delay.py
+# mitmweb --ssl-insecure -s mitm-delay.py
 
 import asyncio
 import logging
