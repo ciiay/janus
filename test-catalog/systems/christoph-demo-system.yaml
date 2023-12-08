@@ -7,7 +7,7 @@ metadata:
     This is a small demo system
   annotations:
     backstage.io/source-location: url:https://github.com/jerolimov/janus/blob/main/test-catalog/systems/christoph-demo-system.yaml
-    backstage.io/techdocs-ref: dir:../../techdocs/christoph-demo
+    backstage.io/techdocs-ref: url:https://github.com/jerolimov/janus/tree/main/techdocs/christoph-demo
     github.com/project-slug: jerolimov/janus
   tags:
     - christoph-demo
