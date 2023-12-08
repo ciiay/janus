@@ -11,7 +11,7 @@ metadata:
       url: https://github.com/jerolimov/janus
   annotations:
     backstage.io/source-location: url:https://github.com/jerolimov/janus/blob/main/test-catalog/components/christoph-demo1-service.yaml
-    backstage.io/techdocs-ref: dir:..
+    backstage.io/techdocs-ref: dir:../../techdocs/christoph-demo
     github.com/project-slug: jerolimov/janus
     backstage.io/kubernetes-id: christoph-demo1-service
     backstage.io/kubernetes-namespace: christoph-backstage-test

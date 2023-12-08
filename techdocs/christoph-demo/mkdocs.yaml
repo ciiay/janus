@@ -1,0 +1,15 @@
+site_name: Christophs Demo
+site_description: This is a small demo system
+repo_url: https://github.com/jerolimov/janus
+edit_uri: edit/main/docs
+
+#plugins:
+#  - techdocs-core
+
+# Note for content editors, edit only the section below
+nav:
+  - Onboard a developer to OpenShift: index.md
+  - Services:
+      - Demo 1: demo1.md
+      - Demo 2: demo2.md
+      - Demo 3: demo3.md
