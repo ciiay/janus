@@ -1,0 +1,22 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: auth0-app-config
+data:
+  auth0-config.yaml: |
+    app:
+      title: Auth0 app config
+    auth:
+      environment: development
+      providers:
+        auth0:
+          development:
+            clientId: ${AUTH_AUTH0_CLIENT_ID}
+            clientSecret: ${AUTH_AUTH0_CLIENT_SECRET}
+            domain: ${AUTH_AUTH0_DOMAIN_ID}
+    #        audience: ${AUTH_AUTH0_AUDIENCE}
+    #        connection: ${AUTH_AUTH0_CONNECTION}
+    #        connectionScope: ${AUTH_AUTH0_CONNECTION_SCOPE}
+      session:
+        secret: ${AUTH_SESSION_SECRET}
+    signInPage: auth0
