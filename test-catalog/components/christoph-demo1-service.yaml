@@ -1,0 +1,19 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: christoph-demo1-service
+  title: Christophs Demo 1 Service
+  description: |
+    This is a small demo service with annotations for:
+    - Tekton
+  links:
+    - title: My Janus notes
+      url: https://github.com/jerolimov/janus
+  annotations:
+    github.com/project-slug: jerolimov/janus
+    backstage.io/kubernetes-id: christoph-demo1-service
+    backstage.io/kubernetes-namespace: christoph-backstage-test
+spec:
+  type: service
+  owner: cjerolim
+  lifecycle: production

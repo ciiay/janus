@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: cjerolim
+spec:
+  profile:
+    email: cjerolim@redhat.com
+    displayName: Christoph Jerolimov
+  memberOf: [janus-authors]
