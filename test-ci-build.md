@@ -26,9 +26,38 @@ export version=1.0-185-CI
 helm install -n $namespace --generate-name https://github.com/rhdh-bot/openshift-helm-charts/raw/developer-hub-$version/charts/redhat/redhat/developer-hub/$version/developer-hub-$version.tgz
 ```
 
-## Summary
+## Watch
 
 ```
-OpenShift version: 4.14.2
-RHDH version: 1.0-185-CI
+oc get deployments --watch
+oc get pods --watch
+```
+
+## Restart and wait
+
+```
+oc get deployments -o name | xargs oc rollout restart
+
+oc get deployments -o name | xargs kubectl wait --for condition=Available=True --timeout=20s
+```
+
+## Get route
+
+```
+echo -n 'https://' && oc get route developer-hub-1-1700661079 '-o=jsonpath={.spec.host}'
+```
+
+## Logs
+
+```
+oc get pods -l app.kubernetes.io/component=backstage | xargs oc logs -f
+```
+
+## Version
+
+```
+echo
+echo "RHDH version:" $version
+oc version | grep 'Server Version:' | sed 's/Server Version:/OpenShift/g'
+echo
 ```
