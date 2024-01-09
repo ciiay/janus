@@ -2,8 +2,13 @@
 
 set -e
 
+items=${1:-100}
+
 outFolder="generated"
-allComponentsYaml="all-components.yaml"
+
+allComponentsYaml="$outFolder/all-components.yaml"
+
+mkdir -p "$outFolder"
 
 cat <<EOF > "$allComponentsYaml"
 apiVersion: backstage.io/v1alpha1
@@ -15,14 +20,26 @@ spec:
   targets:
 EOF
 
-for i in $(seq 1 10); do
+echo "Will generate  $items  components in folder  $outFolder  and add them to  $allComponentsYaml ..."
+
+for i in $(seq 1 $items); do
     in=showcase-service-template.yaml
     out=$(echo $in | sed "s/.yaml/-$i.yaml/g")
     cat "$in" | sed "s/\$i/$i/g" > "$outFolder/$out"
 done
 
-for i in $(seq 1 100); do
+for i in $(seq 1 $items); do
     in=showcase-service-template.yaml
     out=$(echo $in | sed "s/.yaml/-$i.yaml/g")
     echo "    - ./$outFolder/$out"
 done >> "$allComponentsYaml"
+
+echo "Done."
+echo
+echo "Please include this into your app-config.yaml:"
+echo
+echo "catalog:"
+echo "  locations:"
+echo "    - type: file"
+echo "      target: $(pwd)/$allComponentsYaml"
+echo 
