@@ -47,6 +47,116 @@ metadata:
   generateName: christoph-demo3-service-
   labels:
     backstage.io/kubernetes-id: christoph-demo3-service
+    component: christoph-demo3-service
+spec:
+  pipelineSpec:
+    tasks:
+      - name: a-little-bit-longer-task-name-1
+        taskSpec:
+          steps:
+            - name: echo
+              image: ubuntu
+              script: |
+                #!/usr/bin/env bash
+                echo "Hello 1"
+      - name: a-little-bit-longer-task-name-2
+        taskSpec:
+          steps:
+            - name: echo
+              image: ubuntu
+              script: |
+                #!/usr/bin/env bash
+                echo "Hello 2"
+        runAfter:
+          - a-little-bit-longer-task-name-1
+      - name: a-little-bit-longer-task-name-3
+        taskSpec:
+          steps:
+            - name: echo
+              image: ubuntu
+              script: |
+                #!/usr/bin/env bash
+                echo "Hello 3"
+        runAfter:
+          - a-little-bit-longer-task-name-2
+      - name: a-little-bit-longer-task-name-4
+        taskSpec:
+          steps:
+            - name: echo
+              image: ubuntu
+              script: |
+                #!/usr/bin/env bash
+                echo "Hello 4"
+        runAfter:
+          - a-little-bit-longer-task-name-3
+      - name: a-little-bit-longer-task-name-5
+        taskSpec:
+          steps:
+            - name: echo
+              image: ubuntu
+              script: |
+                #!/usr/bin/env bash
+                echo "Hello 5"
+        runAfter:
+          - a-little-bit-longer-task-name-4
+      - name: a-little-bit-longer-task-name-6
+        taskSpec:
+          steps:
+            - name: echo
+              image: ubuntu
+              script: |
+                #!/usr/bin/env bash
+                echo "Hello 6"
+        runAfter:
+          - a-little-bit-longer-task-name-5
+      - name: a-little-bit-longer-task-name-7
+        taskSpec:
+          steps:
+            - name: echo
+              image: ubuntu
+              script: |
+                #!/usr/bin/env bash
+                echo "Hello 7"
+        runAfter:
+          - a-little-bit-longer-task-name-6
+      - name: a-little-bit-longer-task-name-8
+        taskSpec:
+          steps:
+            - name: echo
+              image: ubuntu
+              script: |
+                #!/usr/bin/env bash
+                echo "Hello 8"
+        runAfter:
+          - a-little-bit-longer-task-name-7
+      - name: a-little-bit-longer-task-name-9
+        taskSpec:
+          steps:
+            - name: echo
+              image: ubuntu
+              script: |
+                #!/usr/bin/env bash
+                echo "Hello 9"
+        runAfter:
+          - a-little-bit-longer-task-name-8
+      - name: a-little-bit-longer-task-name-10
+        taskSpec:
+          steps:
+            - name: echo
+              image: ubuntu
+              script: |
+                #!/usr/bin/env bash
+                echo "Hello 9"
+        runAfter:
+          - a-little-bit-longer-task-name-9
+---
+apiVersion: tekton.dev/v1
+kind: PipelineRun
+metadata:
+  namespace: christoph-backstage-test
+  generateName: christoph-demo3-service-
+  labels:
+    backstage.io/kubernetes-id: christoph-demo3-service
     component: does-not-match
 spec:
   params:
