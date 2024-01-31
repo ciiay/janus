@@ -16,7 +16,7 @@ metadata:
     backstage.io/kubernetes-id: christoph-demo3-service
     backstage.io/kubernetes-namespace: christoph-backstage-test
     backstage.io/kubernetes-label-selector: component=christoph-demo3-service
-    janus-idp.io/tekton: my-backstage
+    janus-idp.io/tekton: christoph-demo3-service
   tags:
     - christoph-demo
 spec:
