@@ -11,3 +11,6 @@ spec:
     - ../components/christoph-demo1-service.yaml
     - ../components/christoph-demo2-service.yaml
     - ../components/christoph-demo3-service.yaml
+    - ../apis/christoph-demo1-api.yaml
+    - ../apis/christoph-demo2-api.yaml
+    - ../apis/christoph-demo3-api.yaml

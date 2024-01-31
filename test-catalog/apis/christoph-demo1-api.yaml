@@ -1,0 +1,24 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: christoph-demo1-api
+  title: Christophs Demo 1 API
+spec:
+  type: openapi
+  owner: user:cjerolim
+  lifecycle: experimental
+  system: christoph-demo-system
+  subcomponentOf: christoph-demo1-service
+  definition: |
+    openapi: "3.0.0"
+    info:
+      version: 1.0.0
+      title: Artist API
+      license:
+        name: MIT
+    servers:
+      - url: http://artist.spotify.net/v1
+    paths:
+      /artists:
+        get:
+          summary: List all artists
