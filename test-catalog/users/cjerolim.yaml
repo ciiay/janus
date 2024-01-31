@@ -2,9 +2,9 @@ apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
   name: cjerolim
-  title: Christoph Jerolimov
+  title: Christoph Jerolimov # shown in the table
 spec:
   profile:
     email: cjerolim@redhat.com
-    displayName: Christoph Jerolimov
+    displayName: Christoph Jerolimov # shown on the detail page
   memberOf: [janus-authors]

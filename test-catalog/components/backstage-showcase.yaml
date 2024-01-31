@@ -23,6 +23,7 @@ metadata:
     backstage.io/kubernetes-namespace: christoph
     sonarqube.org/project-key: janus-idp_backstage-showcase
     janus-idp.io/tekton: my-backstage
+    kubernetes.io/api-server: https://api.crc.testing:6443
 spec:
   type: service
   system: janus-idp

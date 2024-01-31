@@ -5,7 +5,7 @@ metadata:
   title: Christophs Demo 3 Service
   description: |
     This is a small demo service with annotations for:
-    - Tekton
+    - Tekton (with namespace and label selector)
   links:
     - title: My Janus notes
       url: https://github.com/jerolimov/janus
