@@ -21,7 +21,7 @@ metadata:
     - christoph-demo
 spec:
   type: service
-  owner: user:cjerolim
+  owner: user:ciiay
   lifecycle: experimental
   system: christoph-demo-system
   subcomponentOf: christoph-demo2-service
