@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: ciiay
+  title: Yi Cai # shown in the table
+spec:
+  profile:
+    email: yicai@redhat.com
+    displayName: Yi Cai # shown on the detail page
+  memberOf: [janus-authors]
