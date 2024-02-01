@@ -5,7 +5,7 @@ metadata:
   title: Christophs Demo 3 API
 spec:
   type: openapi
-  owner: user:cjerolim
+  owner: user:ciiay
   lifecycle: experimental
   system: christoph-demo-system
   subcomponentOf: christoph-demo1-service
