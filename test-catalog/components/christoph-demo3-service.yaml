@@ -14,7 +14,7 @@ metadata:
     backstage.io/techdocs-ref: dir:../../../techdocs/christoph-demo
     github.com/project-slug: ciiay/janus
     backstage.io/kubernetes-id: christoph-demo3-service
-    backstage.io/kubernetes-namespace: christoph-backstage-test
+    backstage.io/kubernetes-namespace: default
     backstage.io/kubernetes-label-selector: component=christoph-demo3-service
     janus-idp.io/tekton: christoph-demo3-service
   tags:
