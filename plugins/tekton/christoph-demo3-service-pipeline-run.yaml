@@ -4,7 +4,7 @@ metadata:
   namespace: christoph-backstage-test
   generateName: christoph-demo3-service-
   labels:
-    backstage.io/kubernetes-id: my-backstage
+    backstage.io/kubernetes-id: christoph-demo3-service
     component: christoph-demo3-service
 spec:
   params:
