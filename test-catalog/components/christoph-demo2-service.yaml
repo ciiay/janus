@@ -15,7 +15,7 @@ metadata:
     github.com/project-slug: ciiay/janus
     backstage.io/kubernetes-id: christoph-demo2-service
     #backstage.io/kubernetes-namespace: christoph-backstage-test
-    janus-idp.io/tekton: christoph-demo2-service
+    janus-idp.io/tekton: my-backstage
   tags:
     - christoph-demo
 spec:
