@@ -8,11 +8,11 @@ metadata:
     - Tekton (without namespace filter)
   links:
     - title: My Janus notes
-      url: https://github.com/jerolimov/janus
+      url: https://github.com/ciiay/janus
   annotations:
-    backstage.io/source-location: url:https://github.com/jerolimov/janus/blob/main/test-catalog/components/christoph-demo2-service.yaml
+    backstage.io/source-location: url:https://github.com/ciiay/janus/blob/main/test-catalog/components/christoph-demo2-service.yaml
     backstage.io/techdocs-entity: system:christoph-demo-system
-    github.com/project-slug: jerolimov/janus
+    github.com/project-slug: ciiay/janus
     backstage.io/kubernetes-id: christoph-demo2-service
     #backstage.io/kubernetes-namespace: christoph-backstage-test
     janus-idp.io/tekton: christoph-demo2-service
@@ -20,7 +20,7 @@ metadata:
     - christoph-demo
 spec:
   type: service
-  owner: user:cjerolim
+  owner: user:ciiay
   lifecycle: experimental
   system: christoph-demo-system
   subcomponentOf: christoph-demo1-service
